@@ -24,15 +24,19 @@ services:
     container_name: db
     restart: always
     tty: true
-    ports:
-      - "3306:3306"
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=nodedb
-      - MYSQL_PASSWORD=nodedb
-      - MYSQL_USER=nodedb
-      - MYSQL_ROOT_PASSWORD=nodedb
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      - node-network
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
     networks:
       - node-network
 

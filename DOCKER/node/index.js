@@ -4,21 +4,28 @@ const app = express();
 const port = 3000;
 const config = {
     host: 'db',
-    user: 'nodedb',
-    password: 'nodedb',
+    user: 'root',
     database: 'nodedb'
 };
 
 const mysql = require('mysql');
-const connection = mysql.createConnection(config);
-try {
+
+
+
+app.get('/', (req, res) => {
+    const connection = mysql.createConnection(config);
     const sql = `INSERT INTO people(name) values ('Vitor')`;
     connection.query(sql);
-    connection.end();
-} catch(e) {
-    console.error("errror", e.message)
-}
+    connection.query(`SELECT name FROM people`, (err, rows) => {
+        connection.end();
+        if (err) {
+            console.log(err);
+            res.send('Error');
+        } else {
+            res.json(rows);
+        }
+    });
 
-app.get('/', (req, res) => res.send('Hello World!'));
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
