@@ -42,3 +42,29 @@ R
 "gRPC/go-aluno/cmd/client/client.go,0/0/00be5b787a361baa9d875bf05816398a38a43d68
 N
 gRPC/go-aluno/services/user.go,5/4/548c36a7a74255accdc9dc3ca806be88c314f84f
+D
+gRPC/go-aluno/go.mod,1/6/16976207951cbb8d354f5aa3b2ee2e6bd0e0532e
+L
+graphql/graphql-aluno/go.sum,b/9/b9d72b914e6313fc980e020f3da6deaf8c7125d6
+[
++graphql/graphql-aluno/graph/model/course.go,e/5/e5b62301fbcab4e52bf11b71cfac7823c4cfb3c2
+\
+,graphql/graphql-aluno/graph/model/chapter.go,6/5/658354741dcb347871a4a19cd3ef100ef4c47129
+L
+graphql/graphql-aluno/go.mod,6/7/67570d7b888441ca6f848f011b2c98aa298f9cdb
+O
+graphql/graphql-aluno/server.go,b/5/b5123a9e4f925e58291611253befac4a1893e983
+W
+'graphql/graphql-aluno/graph/resolver.go,0/4/045f994a365073f70b9558ae45788722a38b6799
+[
++graphql/graphql-aluno/graph/schema.graphqls,2/b/2bb2dd2f6cc0445642b94ea3e6fe07058cd14a26
+]
+-graphql/graphql-aluno/graph/model/category.go,a/b/ab8fa71ba64d9bb54dd608e73a1ef636848577a5
+_
+/graphql/graphql-aluno/graph/model/models_gen.go,6/f/6f3c6b163a97338502ad1418ca3975799c07bd45
+P
+ graphql/graphql-aluno/gqlgen.yml,1/c/1c30defed3fffcd1e9fbe0b9ddcd58425585d086
+_
+/graphql/graphql-aluno/graph/schema.resolvers.go,7/5/75919ffaa3fe905821edbfd1ca86dfdb65338756
+J
+consul/docker-compose.yaml,e/1/e19c1b84af9a51667582e0230c4b206259d76cd5
