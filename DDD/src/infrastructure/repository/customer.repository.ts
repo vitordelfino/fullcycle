@@ -42,7 +42,7 @@ export class CustomerRepository implements CustomerRepositoryInterface {
       });
      
       const customer = new Customer(id, customerModel.name)
-      const address = new Address(customerModel.street, customerModel.number, customerModel.zipcode, customerModel.city);
+      const address = new Address(customerModel.street, customerModel.number, customerModel.city, customerModel.zipcode);
       customer.address = address;
       customer.addRewardPoints(customerModel.rewardPoints);
       return customer;
@@ -54,7 +54,7 @@ export class CustomerRepository implements CustomerRepositoryInterface {
     const customerModels = await CustomerModel.findAll();
     const customers = customerModels.map((customerModel) => {
       const customer = new Customer(customerModel.id, customerModel.name)
-      const address = new Address(customerModel.street, customerModel.number, customerModel.zipcode, customerModel.city);
+      const address = new Address(customerModel.street, customerModel.number, customerModel.city, customerModel.zipcode);
       customer.address = address;
       customer.addRewardPoints(customerModel.rewardPoints);
       return customer;
